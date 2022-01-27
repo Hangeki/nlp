@@ -1,0 +1,58 @@
+ version: "3.0"
+
+ intents:
+  - gruss
+  - verabschiedung
+  - bot
+  - info
+  - empfehlung
+  - bestellen
+  - news
+  - info
+  
+ slots:
+  sushi_kategorie:
+    type: text
+    mappings: []
+  user_name_bekannt:
+    type: bool
+    mappings: []
+  user_name:
+    type: text
+    mappings: []
+  user_vegetarier:
+    type: bool
+    mappings: []
+
+ responses: 
+  utter_abschied:
+  - text: "Vielen Dank und auf Wiedersehen!"
+  utter_gruss: 
+  - text: "Willkommen!"
+  utter_namen_frage:
+  - text: "Darf ich Sie nach dem Namen fragen?"
+  utter_zugeben_bot:
+  - text: "Beep bop, ich bin ein Bot :)"
+  utter_news:
+  - text: "Die Filiale XY hat bis zum 02.02.2021 wegen Umbau geschlossen."
+  utter_hallo:
+  - text: "Hallo :)"
+  utter_bestell_url:
+  - text: "Sehr gerne! Du kannst unter https://site.de/order.php bestellen"
+  utter_info_geben:
+  - text: "Sushi ist ein japanisches Gericht aus Reis mit Fischstückchen, Meeresfrüchte, Nori (Seetang), Gemüse, Tofu oder Ei. Sie sollten es probieren!"
+
+ actions:
+ - utter_abschied
+ - utter_gruss
+ - utter_namen_frage
+ - utter_zugeben_bot 
+ - utter_news
+ - utter_hallo
+ - utter_bestell_url
+ - utter_news
+ - utter_info_geben
+
+ session_config:
+  session_expiration_time: 60 # in min!
+  carry_over_slots_to_new_session: true

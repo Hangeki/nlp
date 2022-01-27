@@ -1,0 +1,28 @@
+version: "3.0"
+
+stories:
+- story: anfang
+  steps:
+  - intent: gruss
+  - action: utter_gruss
+#  - action: utter_namen_frage
+
+- story: abschied
+  steps:
+  - intent: verabschiedung
+  - action: utter_abschied
+
+- story: user_fragt_nach_news
+  steps: 
+  - intent: news
+  - action: utter_news
+
+- story: user_fragt_nach_info
+  steps:
+  - intent: info
+  - action: utter_info_geben
+
+- story: user_will_bestellen
+  steps: 
+  - intent: bestellung
+  - action: utter_bestell_url

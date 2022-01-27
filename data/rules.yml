@@ -1,0 +1,30 @@
+version: "3.0"
+
+rules:
+
+- rule: wenn user verabschiedet, es auch machen
+  steps:
+  - intent: verabschiedung
+  - action: utter_abschied
+
+- rule: zugeben, dass bot
+  steps:
+  - intent: bot
+  - action: utter_zugeben_bot
+
+#- rule: wenn name unbekannt
+#  condition:
+#  - slot_was_set:
+#    - user_name_bekannt: false
+#  steps: 
+#  - intent: gruss
+#  - action: utter_gruss
+#  - action: utter_namen_frage
+
+#- rule: hallo wenn name bekannt
+#  condition:
+#  - slot_was_set:
+#    - user_name_bekannt: true
+#  steps: 
+#  - intent: gruss
+#  - action: utter_hallo

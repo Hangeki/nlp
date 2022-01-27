@@ -1,0 +1,51 @@
+version: "3.0"
+
+nlu:
+- intent: gruss
+  examples: |
+    - hi
+    - hey
+    - hallo
+    - tach
+    - guten tag
+    
+- intent: verabschiedung
+  examples: |
+    - bye
+    - ciao
+    - auf wiedersehen
+    - bis dann
+    - bis später
+    
+- intent: bot
+  examples: |
+    - bist du ein bot
+    - spreche ich mit einem bot
+    - bist du ein mensch
+    - spreche ich mit einem menschen
+    
+- intent: info
+  examples: |
+    - was ist sushi
+    - kannst du mir was zu sushi erzählen
+    - wie schmeckt sushi
+    
+- intent: empfehlung
+  examples: |
+    - was kannst du empfehlen
+    - was ist die heutige empfehlung
+    - ich weiß nicht was ich wählen soll    
+    
+- intent: bestellung
+  examples: |
+    - ich möchte bestellen
+    - ich möchte ein [maki](sushi_kategorie)
+    - ich würde ein [inari](sushi_kategorie)
+    - ich will ein [nigiri](sushi_kategorie)
+    
+- intent: news
+  examples: |
+   - was gibt es neues
+   - neuigkeiten
+   - wie geht es 
+   - kannst du mir etwas zum restaurant sagen   

@@ -1,0 +1,20 @@
+recipe: default.v1
+language: de
+pipeline:
+  - name: WhitespaceTokenizer ## leerzeichen als trennzeichen, sonderzeichen durch leerzeichen ersetzt
+  - name: CountVectorsFeaturizer ## intent klassifizierung
+  - name: DIETClassifier # Dual Intent Entity Transformer (DIET)
+    epochs: 50 ## wiederholungen beim training vom model
+    constrain_similarities: true
+    random_seed: 2
+  - name: EntitySynonymMapper  # für synonyme, noch nicht benutzt
+policies:
+   - name: MemoizationPolicy # versucht, stories nachzumachen, aud denen das model trainiert wurde
+#   - name: RulePolicy
+#   - name: UnexpecTEDIntentPolicy
+     max_history: 5 # vorhergegangenes, was noch relevant ist
+     epochs: 60
+#   - name: TEDPolicy
+#     max_history: 5
+#     epochs: 100
+     constrain_similarities: true
